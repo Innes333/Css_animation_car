@@ -1,0 +1,99 @@
+body{
+	margin: 0;
+	padding: 0;
+	font: 1em Arial;
+}
+.banner{
+	height: 268px;
+	width: 1035px;
+	margin: 0 auto;
+	padding: 0;
+	background-image: url(../img/sky_03.png);
+	background-repeat: no-repeat;
+}
+.cloud{
+	background-image: url(../img/cloud_03.png);
+	background-repeat: repeat-x;
+	z-index:1;
+	height: 268px;
+	width: 1035px;
+	-webkit-animation: landscape 80s infinite;
+}
+.horizont{
+	height: 268px;
+	width: 1035px;
+	background-image: url(../img/horizont_03.png);
+	background-repeat: repeat-x;
+	-webkit-animation: landscape 35s infinite linear;
+}
+.hill{
+	height: 268px;
+	width: 1035px;
+	background-image: url(../img/hill_03.png);
+	background-repeat: repeat-x;
+	position: relative;
+	-webkit-animation: landscape 20s infinite linear;
+}
+.grass,
+.grass2{
+	height: 268px;
+	width: 1035px;
+	background-image: url(../img/grass_03.png);
+	background-repeat: repeat-x;
+	position: absolute;
+	bottom: 0;
+}
+.auto{
+	position: absolute;
+	width: 234px;
+	height: 138px;
+	bottom: 0;
+	left: 400px;
+}
+.trailer{
+	background-image: url(../img/trailer_03.png);
+	background-repeat: no-repeat;
+	width: 234px;
+	height: 150px;
+	-webkit-animation: trailer 1s infinite linear;
+}
+[class*="whell"]{
+	background-image: url(../img/wheel_03.png);
+	background-repeat: no-repeat;
+	width:63px;
+	height:63px;
+	position: absolute;
+	bottom: 0;
+
+}
+.whell1{
+	left: 17px;
+	-webkit-animation: spin 1s infinite reverse linear;
+}
+.whell2{
+	left: 146px;
+	-webkit-animation: spin 1s infinite reverse linear;
+}
+.grass{
+	-webkit-animation: landscape 10s infinite linear;
+}
+.grass2{
+	-webkit-animation: landscape 5s infinite linear;
+}
+
+/* animation */
+
+@-webkit-keyframes landscape{
+	from {background-position: -1035px 0;}
+	to{background-position: 1035 0;}
+}
+
+@-webkit-keyframes spin{
+	0% {-webkit-transform: rotate(0deg);}
+	100%{-webkit-transform: rotate(360deg);}
+
+@-webkit-keyframes trailer{
+	from {-webkit-transform: scaleY(1.3);}
+	50%{-webkit-transform: scaleY(1);}
+	to{-webkit-transform: scaleY(1.3);}
+}
